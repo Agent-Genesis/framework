@@ -1,6 +1,21 @@
 # Repository Guidelines
 
+**Project:** framemwork - Interactive 3D visualization framework
+
 Note for agents: This repository is public. Use branches + PRs (no direct pushes to `main`). See Repository & Access below.
+
+## 🤖 Agent Instructions
+
+**When working in this repository:**
+
+1. **Mandatory Workflows:**
+   - Check git status before starting work
+   - Use branch workflow (`feat/`, `fix/`, `chore/`)
+   - Run `make build` when changing `src/` files
+   - Follow conventional commits
+   - Create PRs with descriptions and testing steps
+2. **Quality Gates:** `make lint` must pass (zero warnings), CI `build` status must be green
+3. **Repository Context:** Public repo with branch protections - all work via PRs, no direct `main` pushes
 
 ## Repository & Access
 
@@ -21,12 +36,13 @@ Note for agents: This repository is public. Use branches + PRs (no direct pushes
 ## Build, Test, and Development Commands
 
 - Build: `make build` (copies from `src/` to `public/`)
-- Serve locally: `make serve` (http://localhost:8000)
+- Serve locally: `make serve` (<http://localhost:8000>)
 - Clean: `make clean`
 - Lint: `make lint` (ESLint, zero warnings)
 - Format: `make format` (Prettier write) / `make format-check`
 
 ## CI & Status Checks
+
 - GitHub Actions workflow `CI` runs on PRs to `main`.
 - Required status check: `build` must pass before merging. It includes ESLint, Prettier check, and asset verification.
 - Keep artifacts updated by running `make build` locally when changing `src/`.
@@ -55,6 +71,7 @@ Note for agents: This repository is public. Use branches + PRs (no direct pushes
   - Link related issue(s) if applicable.
 
 ## Merging Policy
+
 - Squash-only merges. Merge commits and rebase merges are disabled; branches deleted on merge.
 - CODEOWNERS in `.github/CODEOWNERS` defines default reviewers. Code owner review is required by branch protection.
 
