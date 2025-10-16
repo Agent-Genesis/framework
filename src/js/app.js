@@ -186,7 +186,11 @@ scopeLevels.forEach((scope) => {
       );
 
       if (timeDiff <= 1 || concernDiff <= 1) {
-        const material = new THREE.LineBasicMaterial({ color: scope.color, opacity: 0.2, transparent: true });
+        const material = new THREE.LineBasicMaterial({
+          color: scope.color,
+          opacity: 0.2,
+          transparent: true,
+        });
         const geometry = new THREE.BufferGeometry().setFromPoints([
           scopePoints[i].position,
           scopePoints[j].position,
@@ -299,4 +303,3 @@ function animate() {
 }
 
 animate();
-
