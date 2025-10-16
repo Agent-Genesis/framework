@@ -53,8 +53,8 @@ Note for agents: This repository is private. Use branches + PRs (no direct pushe
   - Link related issue(s) if applicable.
 
 ## Merging Policy
-- Squash-only merges. Merge commits and rebase merges are disabled.
-- CODEOWNERS in `.github/CODEOWNERS` defines default reviewers.
+- Squash-only merges. Merge commits and rebase merges are disabled; branches deleted on merge.
+- CODEOWNERS in `.github/CODEOWNERS` defines default reviewers. Code owner review is required by branch protection.
 
 ## Security & Configuration Tips
 
