@@ -1,6 +1,21 @@
 # Repository Guidelines
 
+**Project:** framemwork - Interactive 3D visualization framework
+
 Note for agents: This repository is public. Use branches + PRs (no direct pushes to `main`). See Repository & Access below.
+
+## 🤖 Agent Instructions
+
+**When working in this repository:**
+
+1. **Mandatory Workflows:**
+   - Check git status before starting work
+   - Use branch workflow (`feat/`, `fix/`, `chore/`)
+   - Run `make build` when changing `src/` files
+   - Follow conventional commits
+   - Create PRs with descriptions and testing steps
+2. **Quality Gates:** `make lint` must pass (zero warnings), CI `build` status must be green
+3. **Repository Context:** Public repo with branch protections - all work via PRs, no direct `main` pushes
 
 ## Repository & Access
 
@@ -21,7 +36,7 @@ Note for agents: This repository is public. Use branches + PRs (no direct pushes
 ## Build, Test, and Development Commands
 
 - Build: `make build` (copies from `src/` to `public/`)
-- Serve locally: `make serve` (http://localhost:8000)
+- Serve locally: `make serve` (<http://localhost:8000>)
 - Clean: `make clean`
 - Lint: `make lint` (ESLint, zero warnings)
 - Format: `make format` (Prettier write) / `make format-check`

@@ -17,7 +17,7 @@ serve: build
 	@echo "Serving on http://localhost:8000 (public/)"
 
 lint:
-	@npx --yes eslint src/js --max-warnings=0
+	@npx --yes eslint@8 src/js --max-warnings=0
 
 format:
 	@npx --yes prettier --write .

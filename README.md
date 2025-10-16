@@ -5,7 +5,7 @@ An interactive 3D visualization of Scope/Scale, Time, and Concern/Viewpoint usin
 ## Quick Start
 
 - Build + serve:
-  - `make serve` (serves `public/` at http://localhost:8000)
+  - `make serve` (serves `public/` at <http://localhost:8000>)
 - Manual build:
   - `make build` (copies from `src/` to `public/`)
   - Serve: `python3 -m http.server 8000 --directory public`
