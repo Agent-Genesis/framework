@@ -11,11 +11,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Build static assets
         run: |
           mkdir -p public/js public/styles
           cp -r src/js/* public/js/ || true
           cp -r src/styles/* public/styles/ || true
+
+      - name: ESLint
+        run: npx --yes eslint src/js --max-warnings=0
 
       - name: Verify files
         run: |
@@ -25,4 +33,3 @@ jobs:
 
       - name: Prettier check
         run: npx --yes prettier --check .
-

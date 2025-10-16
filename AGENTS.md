@@ -1,15 +1,11 @@
 # Repository Guidelines
 
-Note for agents: This repository is private. Use branches + PRs (no direct pushes to `main`). See Repository & Access below.
+Note for agents: This repository is public. Use branches + PRs (no direct pushes to `main`). See Repository & Access below.
 
 ## Repository & Access
 
-- Default branch: `main`. Branch protections are configured (1 approving review, conversation resolution, linear history, no force-push/deletion). If enforcement is unavailable due to plan limits, follow the same rules manually:
-  - No direct pushes to `main`
-  - At least 1 approving review per PR
-  - Resolve all conversations before merge
-  - Keep linear history (rebase or squash)
-- Remote: `origin` pointing to the private GitHub repo.
+- Default branch: `main`. Branch protections are configured (required status checks, 1 approving review, code owner review, conversation resolution, linear history, no force-push/deletion).
+- Remote: `origin` pointing to the GitHub repo.
 - Branch naming: `feat/<short-topic>`, `fix/<issue-id>`, `chore/<task>`.
 - Open PRs with clear description, screenshots/GIFs for UI changes, and linked issues.
 
@@ -27,12 +23,13 @@ Note for agents: This repository is private. Use branches + PRs (no direct pushe
 - Build: `make build` (copies from `src/` to `public/`)
 - Serve locally: `make serve` (http://localhost:8000)
 - Clean: `make clean`
-- Optional formatting: `npx prettier --write .`
+- Lint: `make lint` (ESLint, zero warnings)
+- Format: `make format` (Prettier write) / `make format-check`
 
 ## CI & Status Checks
 - GitHub Actions workflow `CI` runs on PRs to `main`.
-- Required status check: `build` must pass before merging.
-- Keep the build artifacts updated by running `make build` locally when changing `src/`.
+- Required status check: `build` must pass before merging. It includes ESLint, Prettier check, and asset verification.
+- Keep artifacts updated by running `make build` locally when changing `src/`.
 
 ## Coding Style & Naming Conventions
 
@@ -66,3 +63,4 @@ Note for agents: This repository is private. Use branches + PRs (no direct pushe
 - Pin CDN versions (as in the README) and use HTTPS.
 - For offline/dev stability, place third‑party files in `vendor/` and reference locally.
 - Avoid introducing eval/dynamic script injection; keep data generation deterministic.
+- Consider enabling GitHub Pages or a static host for preview environments.
