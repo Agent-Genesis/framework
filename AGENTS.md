@@ -4,7 +4,7 @@ Note for agents: This repository is private. Use branches + PRs (no direct pushe
 
 ## Repository & Access
 
-- Default branch: `main`. Branch protection intended (require PR review + checks), but may be unavailable on private repos without a paid plan. Until enabled, follow policy strictly:
+- Default branch: `main`. Branch protections are configured (1 approving review, conversation resolution, linear history, no force-push/deletion). If enforcement is unavailable due to plan limits, follow the same rules manually:
   - No direct pushes to `main`
   - At least 1 approving review per PR
   - Resolve all conversations before merge
