@@ -49,7 +49,7 @@ for (let s = 0; s < scopeLevels.length; s++) {
             time: timeLevels[t].name,
             concern: concernLevels[c].name,
             example: `Example of ${concernLevels[c].name} at ${scopeLevels[s].name} level with ${timeLevels[t].name} timescale`,
-            considerations: `Key considerations for this combination include...`,
+            considerations: "Key considerations for this combination include...",
           },
         });
       }
