@@ -4,7 +4,11 @@ Note for agents: This repository is private. Use branches + PRs (no direct pushe
 
 ## Repository & Access
 
-- Default branch: `main`. Protect it (require PR review + passing checks).
+- Default branch: `main`. Branch protection intended (require PR review + checks), but may be unavailable on private repos without a paid plan. Until enabled, follow policy strictly:
+  - No direct pushes to `main`
+  - At least 1 approving review per PR
+  - Resolve all conversations before merge
+  - Keep linear history (rebase or squash)
 - Remote: `origin` pointing to the private GitHub repo.
 - Branch naming: `feat/<short-topic>`, `fix/<issue-id>`, `chore/<task>`.
 - Open PRs with clear description, screenshots/GIFs for UI changes, and linked issues.
