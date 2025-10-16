@@ -15,6 +15,11 @@ Project structure:
 - `public/` — served root (`index.html`, built assets)
 - `.github/` — CI and repo configs
 
+## Contributing & CI
+- PRs must pass CI before merge (required status check: `build`).
+- Squash-only merges are enabled; branches are deleted on merge.
+- Code owner review is required per `.github/CODEOWNERS`.
+
 ## 3D Visualization Features
 
 This app provides:

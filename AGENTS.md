@@ -29,6 +29,11 @@ Note for agents: This repository is private. Use branches + PRs (no direct pushe
 - Clean: `make clean`
 - Optional formatting: `npx prettier --write .`
 
+## CI & Status Checks
+- GitHub Actions workflow `CI` runs on PRs to `main`.
+- Required status check: `build` must pass before merging.
+- Keep the build artifacts updated by running `make build` locally when changing `src/`.
+
 ## Coding Style & Naming Conventions
 
 - JavaScript: 2‑space indent; use `const`/`let`; semicolons required; double quotes for strings to match current snippet; camelCase for variables/functions; PascalCase for classes.
