@@ -4,15 +4,16 @@ An interactive 3D visualization of Scope/Scale, Time, and Concern/Viewpoint usin
 
 ## Quick Start
 
-- Open `index.html` directly, or serve locally:
-  - `python3 -m http.server 8000`
-  - Visit `http://localhost:8000/index.html`
+- Build + serve:
+  - `make serve` (serves `public/` at http://localhost:8000)
+- Manual build:
+  - `make build` (copies from `src/` to `public/`)
+  - Serve: `python3 -m http.server 8000 --directory public`
 
 Project structure:
-- `index.html` — main page
-- `styles/main.css` — styles
-- `js/app.js` — app logic
-- `vendor/` — optional pinned third‑party libraries (CDN by default)
+- `src/` — app source (JS/CSS)
+- `public/` — served root (`index.html`, built assets)
+- `.github/` — CI and repo configs
 
 ## 3D Visualization Features
 
@@ -45,4 +46,3 @@ This app provides:
 2. Explore: click spheres to update the details panel
 3. Filter: toggle concern checkboxes
 4. Resize: window resize maintains aspect and layout
-

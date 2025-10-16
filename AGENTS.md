@@ -16,20 +16,18 @@ Note for agents: This repository is private. Use branches + PRs (no direct pushe
 ## Project Structure & Module Organization
 
 - Current layout:
-  - `index.html` — main page hosting the canvas and panels
-  - `js/app.js` — app logic and scene setup
-  - `styles/main.css` — styles for layout, tooltip, legend, filters
-  - `vendor/` — optional pinned third‑party libs (CDN used by default)
-  - `.claude/` — local tooling; not needed to run the visualization
+  - `public/index.html` — main page hosting the canvas and panels
+  - `src/js/app.js` — app logic and scene setup
+  - `src/styles/main.css` — styles for layout, tooltip, legend, filters
+  - `public/` — served root (built assets land here via `make build`)
+  - `.github/` — CI and repo configs
 
 ## Build, Test, and Development Commands
 
-- Build: None required (static site)
-- Run locally:
-  - `python3 -m http.server 8000` (serve from repo root)
-  - Open `http://localhost:8000/index.html`
-- Optional formatting (if Node is available):
-  - `npx prettier --write index.html js/**/*.js styles/**/*.css`
+- Build: `make build` (copies from `src/` to `public/`)
+- Serve locally: `make serve` (http://localhost:8000)
+- Clean: `make clean`
+- Optional formatting: `npx prettier --write .`
 
 ## Coding Style & Naming Conventions
 
@@ -53,6 +51,10 @@ Note for agents: This repository is private. Use branches + PRs (no direct pushe
   - Screenshots or short GIF for UI changes.
   - Steps to reproduce and test locally.
   - Link related issue(s) if applicable.
+
+## Merging Policy
+- Squash-only merges. Merge commits and rebase merges are disabled.
+- CODEOWNERS in `.github/CODEOWNERS` defines default reviewers.
 
 ## Security & Configuration Tips
 
