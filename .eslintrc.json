@@ -8,6 +8,9 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
+  "globals": {
+    "THREE": "readonly"
+  },
   "rules": {
     "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "no-console": "off",
@@ -16,4 +19,3 @@
     "indent": ["error", 2]
   }
 }
-

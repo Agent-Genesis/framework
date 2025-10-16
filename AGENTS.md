@@ -27,6 +27,7 @@ Note for agents: This repository is public. Use branches + PRs (no direct pushes
 - Format: `make format` (Prettier write) / `make format-check`
 
 ## CI & Status Checks
+
 - GitHub Actions workflow `CI` runs on PRs to `main`.
 - Required status check: `build` must pass before merging. It includes ESLint, Prettier check, and asset verification.
 - Keep artifacts updated by running `make build` locally when changing `src/`.
@@ -55,6 +56,7 @@ Note for agents: This repository is public. Use branches + PRs (no direct pushes
   - Link related issue(s) if applicable.
 
 ## Merging Policy
+
 - Squash-only merges. Merge commits and rebase merges are disabled; branches deleted on merge.
 - CODEOWNERS in `.github/CODEOWNERS` defines default reviewers. Code owner review is required by branch protection.
 

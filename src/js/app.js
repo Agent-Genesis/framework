@@ -49,7 +49,7 @@ for (let s = 0; s < scopeLevels.length; s++) {
             time: timeLevels[t].name,
             concern: concernLevels[c].name,
             example: `Example of ${concernLevels[c].name} at ${scopeLevels[s].name} level with ${timeLevels[t].name} timescale`,
-            considerations: `Key considerations for this combination include...`,
+            considerations: "Key considerations for this combination include...",
           },
         });
       }
@@ -186,7 +186,11 @@ scopeLevels.forEach((scope) => {
       );
 
       if (timeDiff <= 1 || concernDiff <= 1) {
-        const material = new THREE.LineBasicMaterial({ color: scope.color, opacity: 0.2, transparent: true });
+        const material = new THREE.LineBasicMaterial({
+          color: scope.color,
+          opacity: 0.2,
+          transparent: true,
+        });
         const geometry = new THREE.BufferGeometry().setFromPoints([
           scopePoints[i].position,
           scopePoints[j].position,
@@ -299,4 +303,3 @@ function animate() {
 }
 
 animate();
-

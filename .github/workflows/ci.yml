@@ -23,7 +23,7 @@ jobs:
           cp -r src/styles/* public/styles/ || true
 
       - name: ESLint
-        run: npx --yes eslint src/js --max-warnings=0
+        run: npx --yes eslint@8 src/js --max-warnings=0
 
       - name: Verify files
         run: |

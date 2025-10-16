@@ -11,11 +11,13 @@ An interactive 3D visualization of Scope/Scale, Time, and Concern/Viewpoint usin
   - Serve: `python3 -m http.server 8000 --directory public`
 
 Project structure:
+
 - `src/` — app source (JS/CSS)
 - `public/` — served root (`index.html`, built assets)
 - `.github/` — CI and repo configs
 
 ## Contributing & CI
+
 - PRs must pass CI before merge (required status check: `build`). The `build` job runs:
   - ESLint (`npx eslint src/js --max-warnings=0`)
   - Prettier check (`npx prettier --check .`)
@@ -24,12 +26,14 @@ Project structure:
 - Code owner review is required per `.github/CODEOWNERS`.
 
 ## Linting & Formatting
+
 - Lint: `make lint` (ESLint, zero warnings)
 - Format: `make format` (Prettier write)
 - Format check: `make format-check`
 - Configs: `.eslintrc.json`, `.eslintignore`, `.prettierrc.json`, `.prettierignore`, `.editorconfig`
 
 ## Deployment
+
 - GitHub Pages (simple): Settings → Pages → Deploy from Branch → select `main` and `/ (root)` or `docs/` pattern. For this repo, serve the `public/` directory by either:
   - Using Actions to deploy `public/` to `gh-pages` branch, or
   - Moving built files into `docs/` and selecting `main/docs`.
@@ -38,6 +42,7 @@ Project structure:
 - Any static host: serve `public/` as the web root
 
 ## Security & Performance Tips
+
 - Pin library versions (Three.js, OrbitControls) and prefer local `public/vendor/` for deterministic builds.
 - Use cache headers for static assets; fingerprint filenames if you later add bundling.
 - Avoid `eval`/dynamic code injection; sanitize any future user inputs.
