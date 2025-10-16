@@ -1,0 +1,11 @@
+{
+  "name": "framework",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An interactive 3D visualization of Scope/Scale, Time, and Concern/Viewpoint using Three.js and OrbitControls.",
+  "scripts": {
+    "lint": "eslint src/js --max-warnings=0",
+    "format": "prettier --write ."
+  }
+}
